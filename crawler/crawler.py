@@ -1,6 +1,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from time import sleep
 
 from bs4 import BeautifulSoup
 
@@ -48,7 +49,8 @@ def travel_select_option(current_position, current_cursor):
 
     cursour_size = len(select_value_list[current_position])
 
-    driver.implicitly_wait(5)
+    sleep(2)
+    print('ok')
 
     select_option()
     selected_value[current_position] = select_value_list[current_position][current_cursor]
